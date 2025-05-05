@@ -1,0 +1,481 @@
+/* Genel Stil Ayarları */
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Üst Menü Çubuğu*/
+.navbar {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    transition: all 0.4s ease;
+    height: 50px;
+    background-color: #110e1dc5;
+}
+
+.logo {
+    height: 100%;
+    max-height: 50px;
+    object-fit: contain;
+    margin-left: -150px;
+}
+
+/* Kısımlar Arası Gölgeli Çizgi */
+.shadow-line {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: #b98c64;
+    box-shadow: 0px 5px 10px #b98c64;
+}
+
+/* Anasayfa Görseli ve Yazı İçeriği*/
+#anasayfa {
+    background-image: url('TN_Resimler/Anasayfa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    height: 100vh;
+}
+
+.text-content {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    text-align: right;
+    color: #b98c64;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+/* Hakkımızda Bölümü */
+#hakkimizda {
+    background-image: url('TN_Resimler/Hakkimizda_T.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid; 
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+#hakkimizda h1, #hakkimizda p {
+    padding: 100px 300px;
+    color: #b98c64;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.400);
+    font-weight: bold;
+}
+
+#hakkimizda p {
+    font-size: 20px;
+}
+
+/* Güneş Burçları Bölümü */
+#gunes-burclari {
+    background-image: url('TN_Resimler/GunesBurclari_T.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: snow;
+    padding: 160px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gunes-burclari h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #b98c64;
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.icon {
+    background-color: transparent;
+    border: 3px solid #b98c64;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.icon img {
+    width: 150px;
+    height: 150px;
+}
+
+.icon.active {
+    background-color: #110e1d;
+    border: 3px solid #110e1d;
+}
+
+.horoscope-box {
+    background-color: #110e1d;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Astrologlar Bölümü */
+#astrologlar {
+    background-image: url('TN_Resimler/Astrologlar_T.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px;
+    display: grid; /* Grid kullanımı */
+    place-items: center;
+}
+
+#astrologlar h2 {
+    font-weight: bold;
+    color: #b98c64;
+    text-align: center;
+}
+
+/* Kartlar için stil */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #b98c64;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.card-body {
+    padding: 20px 10px;
+    background-color: #110e1d;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #b98c64;
+}
+
+.card-text {
+    font-size: 15px;
+    color: snow;
+}
+
+/* Button Stilleri */
+.btn {
+    background-color: #110e1d;
+    border-color: #b98c64;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: #b98c64;
+}
+
+.btn:hover {
+    background-color: #b98c64;
+    border-color: #b98c64;
+}
+
+/* Yorumlar Bölümü */
+#yorumlar {
+    color: snow;
+    background-color: #110e1d;
+    padding: 50px 50px;
+}
+
+.testimonial {
+    display: inline-block;
+    width: 30%;
+    background: #110e1d;
+    padding: 50px 50px;
+    border-radius: 10px;
+    border: 5px solid #b98c64;
+    margin: 10px;
+    flex: 1;
+}
+
+/* Yorum Ekleme Formu */
+#yorum-ekle-form label {
+    color: snow;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#isim, #yorum {
+    background-color: #110e1d;
+    color: white;
+    border: 2px solid #b98c64;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+#yorum {
+    height: 50px;
+}
+
+button {
+    background-color: #110e1d;
+    color: snow;
+    border: 3px solid #b98c64;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #110e1d;
+}
+
+/* Form Görünümü */
+#yorum-ekle-form {
+    border: 3px solid #b98c64;
+    padding: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #110e1d;
+    border-radius: 8px;
+}
+
+/* Fiyatlandırma Bölümü */
+#fiyatlandirma {
+    color: snow;
+    background-color: #110e1d;
+    padding: 40px;
+    text-align: center;
+}
+
+#fiyatlandirma h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#fiyatlandirma p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Tablo Stili */
+table {
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #110e1d;
+    border: 3px solid #b98c64;
+}
+
+/* İletişim Bölümü */
+#iletisim {
+    color: snow;
+    background-image: url("TN_Resimler/iletisim.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    text-align: center;
+}
+
+#iletisim h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* İletişim Formu */
+#contactForm label {
+    color: snow;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+#name, #surname, #package, #email, #astrolog {
+    background-color: #110e1d;
+    color: white;
+    border: 2px solid #b98c64;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #110e1d;
+    color: snow;
+    border: 3px solid #b98c64;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #b98c64;
+}
+
+#confirmationMessage {
+    background-color: #110e1d;
+    color: snow;
+    padding: 20px;
+    border: 3px solid #b98c64;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #110e1d;
+    border-radius: 8px;
+    padding: 20px;
+    border: 3px solid #b98c64;
+}
+
+/* Footer Bölümü */
+footer {
+    background-color: #110e1d;
+    color: snow;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #b98c64;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Medya sorgusu - Telefonlar ve tabletler için */
+@media screen and (max-width: 768px) {
+    .logo {
+        margin-left: 0;
+        max-height: 40px;
+    }
+
+    .navbar {
+        height: 60px;
+    }
+
+    .text-content {
+        font-size: 4vw;
+        right: 20px;
+    }
+
+    #hakkimizda h1, #hakkimizda p {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .icons {
+        gap: 10px;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .testimonial {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #contactForm {
+        padding: 15px;
+    }
+
+    #name, #surname, #package, #email, #astrolog {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+/* Medya sorgusu - Daha küçük ekranlar (telefonlar) */
+@media screen and (max-width: 480px) {
+    .text-content {
+        font-size: 6vw;
+        right: 10px;
+    }
+
+    .navbar {
+        height: 50px;
+    }
+
+    #hakkimizda h1, #hakkimizda p {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #gunes-burclari h1 {
+        font-size: 1.5rem;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .testimonial {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #contactForm {
+        padding: 10px;
+    }
+
+    #name, #surname, #package, #email, #astrolog {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+}
